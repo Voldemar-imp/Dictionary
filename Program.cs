@@ -16,11 +16,11 @@ namespace collections
             Console.WriteLine($"Столица страны {userInput}, это -  {countriesAndCapitals [userInput]}");           
         }
 
-        static void AddToDictionary(Dictionary<string, string> dictionary, string[] kay, string[] value )
+        static void AddToDictionary(Dictionary<string, string> dictionary, string[] key, string[] value )
         {
-            for (int i = 0; i < kay.Length; i++)
+            for (int i = 0; i < key.Length; i++)
             {
-                dictionary.Add(kay[i], value[i]);
+                dictionary.Add(key[i], value[i]);
             }
         }
 
