@@ -13,7 +13,7 @@ namespace collections
 
             AddToDictionary(countriesAndCapitals, countries, capitals);
             string userInput = GetCountryName(countriesAndCapitals);
-            Console.WriteLine($"Столица государства {userInput}, это -  {countriesAndCapitals [userInput]}");           
+            Console.WriteLine($"Столица страны {userInput}, это -  {countriesAndCapitals [userInput]}");           
         }
 
         static void AddToDictionary(Dictionary<string, string> dictionary, string[] kay, string[] value )
