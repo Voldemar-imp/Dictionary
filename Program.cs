@@ -23,18 +23,20 @@ namespace collections
                 dictionary.Add(key[i], value[i]);
             }
         }
-
+        
         static string GetCountryName(Dictionary<string, string> dictionary)
         {
             string userInput = "";
+            bool isCorrect = false; 
 
             Console.WriteLine("Введите назвине страны:");
 
-            while (dictionary.ContainsKey(userInput) == false)
+            while (isCorrect == false)
             {
                 userInput = Console.ReadLine();
+                isCorrect = dictionary.ContainsKey(userInput);
 
-                if (dictionary.ContainsKey(userInput) == false)
+                if (isCorrect == false)
                 {
                     Console.WriteLine($"Страны с названием {userInput} в справочнике нет, попробуйте еще раз: ");
                 }
