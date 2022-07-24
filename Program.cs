@@ -24,25 +24,22 @@ namespace collections
             }
         }
 
-        static string GetCountryName(Dictionary<string, string> cities)
+        static string GetCountryName(Dictionary<string, string> dictionary)
         {
             string userInput = "";
 
             Console.WriteLine("Введите назвине страны:");
 
-            while (cities.ContainsKey(userInput) == false)
+            while (dictionary.ContainsKey(userInput) == false)
             {
                 userInput = Console.ReadLine();
 
-                if (cities.ContainsKey(userInput))
-                {
-                    return userInput;
-                }
-                else
+                if (dictionary.ContainsKey(userInput) == false)
                 {
                     Console.WriteLine($"Страны с названием {userInput} в справочнике нет, попробуйте еще раз: ");
                 }
             }
+
             return userInput;
         }
     }
